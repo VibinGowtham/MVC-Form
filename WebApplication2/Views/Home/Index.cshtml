@@ -1,0 +1,27 @@
+﻿@model WebApplication2.Models.Student
+
+<h4 style="color:purple">
+    <b>ID:</b>    @ViewBag.ID <br />
+    <b>Name:</b>  @ViewBag.Name <br />
+    <b>Addon:</b> @ViewBag.City
+</h4>
+<hr />
+ 
+@using (Html.BeginForm("Form", "Home", FormMethod.Post))
+{     
+            <label>
+                Enter ID:
+            </label>
+            @Html.TextBoxFor(obj => obj.Id)
+            <br />
+            <label>
+            Enter Name: 
+            </label>
+            @Html.TextBoxFor(obj => obj.Name)
+              <br />
+            <label>
+            Enter City: 
+            </label>
+            @Html.TextBoxFor(obj => obj.City)
+            <input type="submit" value="Submit Form" />
+}
